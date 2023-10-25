@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Question9 {
+public class Question09 {
     /* [10430] 나머지 */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
