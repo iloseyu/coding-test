@@ -1,8 +1,9 @@
 import java.io.*;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Question6 {
-    /* [15552] 빠른 A+B */
+public class Question8 {
+    /* [11022] A+B - 8 */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -10,10 +11,14 @@ public class Question6 {
 
         int t = Integer.parseInt(br.readLine());
 
-        for(int i=0; i<t; i++) {
+        for(int i=1; i<=t; i++) {
             st = new StringTokenizer(br.readLine());
-            bw.write( st.countTokens() + " " + (Integer.parseInt(st.nextToken())+Integer.parseInt(st.nextToken())) + " " + st.countTokens() + "\n");
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            int c = a+b;
+            bw.write("Case #" + i + ": " + a + " + " + b + " = " + c);
+            bw.newLine();
         }
-        bw.flush();
+        bw.close();
     }
 }
